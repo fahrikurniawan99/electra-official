@@ -1,7 +1,8 @@
 import Container from "@components/Container";
 import React from "react";
 import { SiShopee, SiAmazon, SiBukalapak } from "react-icons/si";
-import { AiFillShopping } from "react-icons/ai";
+import { LuShoppingCart } from "react-icons/lu";
+import Link from "next/link";
 
 type Props = {};
 
@@ -25,9 +26,12 @@ const WhereGetProduct = (props: Props) => {
           <SiBukalapak className="text-5xl mx-auto text-gray-700" />
           <p className="mt-2 text-gray-500 font-medium">Bukalapak</p>
         </div>
-        <button className="rounded-lg w-full h-20 col-span-3 bg-gray-800 mt-2 text-white inline-flex items-center justify-center text-lg font-medium">
-          Electra Shop <AiFillShopping className="ml-2 text-2xl" />
-        </button>
+        <Link
+          href={"/shop"}
+          className="rounded-lg w-full h-16 col-span-3 bg-gray-800 mt-2 text-white inline-flex items-center justify-center font-medium underline"
+        >
+          Electra Shop <LuShoppingCart className="ml-1 text-2xl" />
+        </Link>
       </div>
     </Container>
   );
